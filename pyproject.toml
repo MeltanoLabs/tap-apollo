@@ -6,7 +6,7 @@ requires = [
 build-backend = "hatchling.build"
 
 [project]
-name = "meltano-tap-apollo"
+name = "meltanolabs-tap-apollo"
 dynamic = ["version"]
 description = "Singer tap for Apollo, built with the Meltano Singer SDK."
 readme = "README.md"

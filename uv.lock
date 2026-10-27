@@ -1041,7 +1041,7 @@ wheels = [
 ]
 
 [[package]]
-name = "meltano-tap-apollo"
+name = "meltanolabs-tap-apollo"
 source = { editable = "." }
 dependencies = [
     { name = "requests" },
