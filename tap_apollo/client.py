@@ -33,6 +33,10 @@ SCHEMAS_DIR = SchemaDirectory(schemas)
 MAX_PER_PAGE = 100
 MAX_PAGES = 500
 
+# Seconds to wait for a response before retrying. Apollo normally answers in about a second,
+# but occasionally a request hangs.
+REQUEST_TIMEOUT = 60
+
 
 class ApolloPaginator(PageNumberPaginator):
     """Page-number paginator for Apollo search endpoints."""
@@ -126,6 +130,16 @@ class ApolloStream(RESTStream):
         return {"Cache-Control": "no-cache", "Content-Type": "application/json"}
 
     @override
+    @property
+    def timeout(self) -> int:
+        """Apollo answers in about a second, so give up on a hung request after a minute.
+
+        Returns:
+            The request timeout in seconds.
+        """
+        return REQUEST_TIMEOUT
+
+    @override
     def get_new_paginator(self) -> BaseAPIPaginator:
         """Create a new pagination helper instance.
 
@@ -211,7 +225,8 @@ class ApolloStream(RESTStream):
         msg = super().response_error_message(response)
         if response.status_code == HTTPStatus.FORBIDDEN:
             msg += (
-                f". Stream '{self.name}' may require a master API key or a paid "
-                "Apollo plan; deselect it if your key does not have access."
+                f". Your Apollo API key may not have access to the endpoint of stream "
+                f"'{self.name}'. Use a master API key, give the key access to this "
+                "endpoint, or deselect the stream."
             )
         return msg

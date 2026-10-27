@@ -29,8 +29,8 @@ class TapApollo(Tap):
             secret=True,  # Flag config as protected.
             title="API Key",
             description=(
-                "Apollo API key. A master API key is required for some streams "
-                "(e.g. users, emailer_messages)."
+                "Apollo API key. Use a master API key, or a key with access to the "
+                "endpoint of each selected stream. phone_calls requires a master key."
             ),
         ),
         th.Property(

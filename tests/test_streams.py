@@ -11,7 +11,7 @@ import pytest
 import responses
 from singer_sdk.exceptions import FatalAPIError
 
-from tap_apollo.client import MAX_PAGES, ApolloStream
+from tap_apollo.client import MAX_PAGES, REQUEST_TIMEOUT, ApolloStream
 from tap_apollo.tap import TapApollo
 
 BASE = "https://api.apollo.io/api/v1"
@@ -179,6 +179,9 @@ def test_other_422s_are_not_retried() -> None:
         get_records(make_tap(), "accounts")
 
 
+def test_request_timeout_is_short() -> None:
+    stream = cast("ApolloStream", make_tap().streams["accounts"])
+    assert stream.timeout == REQUEST_TIMEOUT
 
 
 @responses.activate
