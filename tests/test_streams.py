@@ -5,15 +5,14 @@ from __future__ import annotations
 import contextlib
 import io
 import json
-from typing import TYPE_CHECKING, cast
+from typing import cast
 
+import pytest
 import responses
+from singer_sdk.exceptions import FatalAPIError
 
 from tap_apollo.client import MAX_PAGES, ApolloStream
 from tap_apollo.tap import TapApollo
-
-if TYPE_CHECKING:
-    import pytest
 
 BASE = "https://api.apollo.io/api/v1"
 
@@ -158,3 +157,23 @@ def test_retries_rate_limited_requests(monkeypatch: pytest.MonkeyPatch) -> None:
     records = get_records(make_tap(), "contact_stages")
 
     assert [r["id"] for r in records] == ["s1"]
+
+
+@responses.activate
+def test_retries_apollo_timeouts(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(ApolloStream, "_retry_after", staticmethod(lambda _: 0.0))
+    timeout = {"error": "Something's wrong with your API request. request timed out"}
+    responses.post(f"{BASE}/accounts/search", status=422, json=timeout)
+    responses.post(f"{BASE}/accounts/search", json=page("accounts", [{"id": "a1"}], 1, 1))
+
+    records = get_records(make_tap(), "accounts")
+
+    assert [r["id"] for r in records] == ["a1"]
+
+
+@responses.activate
+def test_other_422s_are_not_retried() -> None:
+    responses.post(f"{BASE}/accounts/search", status=422, json={"error": "invalid sort field"})
+
+    with pytest.raises(FatalAPIError):
+        get_records(make_tap(), "accounts")

@@ -96,6 +96,20 @@ class ApolloStream(RESTStream):
     extra_retry_statuses = (HTTPStatus.TOO_MANY_REQUESTS,)
 
     @override
+    def validate_response(self, response: requests.Response) -> None:
+        """Retry Apollo's server-side timeouts, which it reports as 422s.
+
+        Args:
+            response: A :class:`requests.Response` object.
+
+        Raises:
+            RetriableAPIError: If Apollo timed out handling the request.
+        """
+        if response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY and "timed out" in response.text:
+            raise RetriableAPIError(self.response_error_message(response), response)
+        super().validate_response(response)
+
+    @override
     @property
     def authenticator(self) -> APIKeyAuthenticator:
         """An authenticator object."""
