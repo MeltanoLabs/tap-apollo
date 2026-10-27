@@ -19,6 +19,7 @@ class TapApollo(Tap):
     """Singer tap for Apollo."""
 
     name = "tap-apollo"
+    package_name = "meltanolabs-tap-apollo"
 
     config_jsonschema = th.PropertiesList(
         th.Property(
