@@ -17,15 +17,8 @@
     "book_of_business": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "book_of_business_finder_view_id": {
       "type": [

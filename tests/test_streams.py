@@ -196,3 +196,41 @@ def test_free_form_list_items_are_kept() -> None:
     records = get_records(make_tap(), "contacts")
 
     assert records[0]["contact_emails"] == contact["contact_emails"]
+
+
+@responses.activate
+def test_mixed_type_fields_are_emitted_as_strings() -> None:
+    contact = {
+        "id": "c1",
+        "updated_at": "2026-03-02T00:00:00.000Z",
+        "email_source": "crm_csv",
+        "email_unsubscribed": True,
+        "contact_job_change_event": {"title": "CTO"},
+        "merged_crm_ids": ["a", "b"],
+        "hubspot_vid": 1.5,
+    }
+    responses.post(f"{BASE}/contacts/search", json=page("contacts", [contact], 1, 1))
+
+    record = get_records(make_tap(), "contacts")[0]
+
+    assert record["email_source"] == "crm_csv"
+    assert record["email_unsubscribed"] == "true"
+    assert json.loads(record["contact_job_change_event"]) == {"title": "CTO"}
+    assert record["merged_crm_ids"] == '["a", "b"]'
+    assert record["hubspot_vid"] == "1.5"
+
+
+@responses.activate
+def test_custom_field_values_are_kept() -> None:
+    contact = {
+        "id": "c1",
+        "updated_at": "2026-03-02T00:00:00.000Z",
+        "typed_custom_fields": {"0123456789abcdef01234567": "Gold"},
+        "account": {"id": "a1", "typed_custom_fields": {"0123456789abcdef01234568": 5}},
+    }
+    responses.post(f"{BASE}/contacts/search", json=page("contacts", [contact], 1, 1))
+
+    record = get_records(make_tap(), "contacts")[0]
+
+    assert record["typed_custom_fields"] == contact["typed_custom_fields"]
+    assert record["account"]["typed_custom_fields"] == contact["account"]["typed_custom_fields"]

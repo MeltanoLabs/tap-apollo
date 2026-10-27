@@ -266,44 +266,8 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6913c69d5c848e0001db3166": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6913c69e5c848e0001db3185": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6913c69e5c848e0001db319e": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "69de6a786072ac0019b61ffb": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6adb68a67ba273000c0e4a4d": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6adb68a77ba273000c0e4a4f": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         },
         "facebook_url": {
           "type": [
@@ -401,7 +365,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "account_id": {
       "type": [
@@ -412,41 +377,20 @@
     "ai_variables_status": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "answered": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "call_script": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "campaign_name": {
       "type": [
@@ -649,10 +593,12 @@
                       ],
                       "format": "date-time"
                     }
-                  }
+                  },
+                  "additionalProperties": true
                 }
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "contact_roles": {
@@ -1019,7 +965,8 @@
                   "null"
                 ]
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "existence_level": {
@@ -1311,7 +1258,8 @@
                   "additionalProperties": true
                 }
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "photo_url": {
@@ -1416,14 +1364,8 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6913c69d5c848e0001db3149": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         },
         "updated_at": {
           "type": [
@@ -1620,7 +1562,8 @@
                 "properties": {},
                 "additionalProperties": true
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "contact_job_change_event": {
@@ -1750,7 +1693,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "additionalProperties": true
         },
         "country": {
           "type": [
@@ -1871,7 +1815,8 @@
           "properties": {},
           "additionalProperties": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "contact_id": {
       "type": [
@@ -2290,7 +2235,8 @@
                   "null"
                 ]
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "replied": {
@@ -2380,7 +2326,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "additionalProperties": true
         },
         "send_from_info": {
           "type": [
@@ -2462,7 +2409,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "engagement_data": {
       "type": [
@@ -2506,10 +2454,12 @@
                   "null"
                 ]
               }
-            }
+            },
+            "additionalProperties": true
           }
         }
-      }
+      },
+      "additionalProperties": true
     },
     "hubspot_id": {
       "type": [
@@ -2538,20 +2488,14 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "needs_playbook_autoprospecting": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "note": {
       "type": [
@@ -2651,7 +2595,8 @@
                     ],
                     "format": "date-time"
                   }
-                }
+                },
+                "additionalProperties": true
               }
             },
             "account_stage_id": {
@@ -2866,7 +2811,8 @@
               "properties": {},
               "additionalProperties": true
             }
-          }
+          },
+          "additionalProperties": true
         },
         "account_id": {
           "type": [
@@ -2965,7 +2911,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "additionalProperties": true
         },
         "current_solutions": {
           "type": [
@@ -3188,7 +3135,8 @@
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "additionalProperties": true
                 }
               },
               "updated_at": {
@@ -3198,7 +3146,8 @@
                 ],
                 "format": "date-time"
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "opportunity_pipeline_id": {
@@ -3293,46 +3242,11 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6095a711bd01d100a506d4da": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              }
-            },
-            "6095a711bd01d100a506d4dc": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              }
-            },
-            "66e4ba346fe95a073461e00e": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              }
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "opportunity_id": {
       "type": [
@@ -3442,15 +3356,8 @@
     "relevant_fields": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "rule_config_id": {
       "type": [
@@ -3467,15 +3374,8 @@
     "salesforce_type": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "skipped_at": {
       "type": [
@@ -3487,15 +3387,8 @@
     "slice_keys": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "starred_by_user_ids": {
       "type": [
@@ -3525,15 +3418,8 @@
     "subject": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "title": {
       "type": [

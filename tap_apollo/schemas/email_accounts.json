@@ -300,7 +300,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "domain_enforcement_action": {
       "type": [
@@ -344,15 +345,8 @@
     "inbox_placement_test_health_status": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "is_free_domain": {
       "type": [
@@ -382,28 +376,14 @@
     "mailgun_domains": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "mailwarming_eta": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "mailwarming_max": {
       "type": [
@@ -503,7 +483,8 @@
               ],
               "format": "date-time"
             }
-          }
+          },
+          "additionalProperties": true
         },
         "bulk_warmup_blocked_reason": {
           "type": [
@@ -635,7 +616,8 @@
           "properties": {},
           "additionalProperties": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "max_outbound_emails_per_hour": {
       "type": [
@@ -659,28 +641,14 @@
     "nylas_api_version": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "nylas_provider": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "provider_display_name": {
       "type": [
@@ -704,28 +672,14 @@
     "sendgrid_api_key_v3": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "sendgrid_api_user": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "show_new_domain_warning": {
       "type": [
@@ -791,15 +745,8 @@
     "true_warmup_status": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "true_warmup_thresholds": {
       "type": [
@@ -831,7 +778,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "type": {
       "type": [

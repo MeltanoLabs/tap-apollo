@@ -11,41 +11,20 @@
     "additional_mapped_crm_field": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "associated_modality": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "autorun_downstream_enrichment": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "connector_name": {
       "type": [
@@ -170,41 +149,20 @@
     "json_schema": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "last_run_status": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "mapped_crm_field": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "mirrored": {
       "type": [
@@ -305,7 +263,8 @@
               "null"
             ]
           }
-        }
+        },
+        "additionalProperties": true
       }
     },
     "product_profile_ids": {
@@ -335,15 +294,8 @@
     "schedule_info": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "system_name": {
       "type": [
@@ -354,15 +306,8 @@
     "text_field_max_length": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "type": {
       "type": [

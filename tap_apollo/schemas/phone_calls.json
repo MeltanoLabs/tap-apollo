@@ -305,16 +305,11 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6913c69e5c848e0001db319e": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "account_id": {
       "type": [
@@ -331,15 +326,8 @@
     "blocklisted": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "call_identifier": {
       "type": [
@@ -531,7 +519,8 @@
                   "null"
                 ]
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "contact_roles": {
@@ -965,7 +954,8 @@
                       "null"
                     ]
                   }
-                }
+                },
+                "additionalProperties": true
               },
               "dnc_status": {
                 "type": [
@@ -1047,7 +1037,8 @@
                   "null"
                 ]
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "photo_url": {
@@ -1165,14 +1156,8 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6913c69d5c848e0001db3149": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         },
         "updated_at": {
           "type": [
@@ -1288,7 +1273,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "contact_id": {
       "type": [
@@ -1369,15 +1355,8 @@
     "note": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "note_text": {
       "type": [
@@ -1424,15 +1403,8 @@
     "recording_stopped_by_rep": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "recording_url": {
       "type": [
@@ -1455,15 +1427,8 @@
     "source": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "start_time": {
       "type": [
@@ -1511,15 +1476,8 @@
     "transcription_too_long": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "twilio_call_sid": {
       "type": [
@@ -1530,28 +1488,14 @@
     "twilio_error_code": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "twilio_error_message": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "twilio_recording_sid": {
       "type": [

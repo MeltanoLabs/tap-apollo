@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import json
 import sys
+from functools import cached_property
 from http import HTTPStatus
 from typing import TYPE_CHECKING, Any, cast
 
@@ -23,6 +25,7 @@ if TYPE_CHECKING:
     from collections.abc import Generator
 
     import requests
+    from singer_sdk.helpers.types import Context
     from singer_sdk.pagination import BaseAPIPaginator
     from singer_sdk.streams.rest import HTTPRequest, PageContext
 
@@ -170,6 +173,33 @@ class ApolloStream(RESTStream):
             else:
                 request.params.update(paging)
         return request
+
+    @cached_property
+    def _string_fields(self) -> frozenset[str]:
+        """Top-level fields declared as plain strings."""
+        fields = set()
+        for name, prop in self.schema["properties"].items():
+            types = prop.get("type", [])
+            if set(types if isinstance(types, list) else [types]) - {"null"} == {"string"}:
+                fields.add(name)
+        return frozenset(fields)
+
+    @override
+    def post_process(self, row: dict, context: Context | None = None) -> dict | None:
+        """JSON-encode values of string fields that arrive as another type.
+
+        Fields whose type varies are declared as strings, because some targets fail on
+        columns that mix objects and scalars.
+
+        Returns:
+            The record.
+        """
+        for name in self._string_fields & row.keys():
+            value = row[name]
+            if value is not None and not isinstance(value, str):
+                # The SDK parses JSON numbers as Decimal.
+                row[name] = json.dumps(value, default=float)
+        return row
 
     def stop_paginating(self, records: list[dict]) -> bool:  # ruff: ignore[unused-method-argument, no-self-use]
         """Return whether pagination should stop early after this page.

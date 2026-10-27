@@ -94,7 +94,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "contact_emailer_campaign_ids": {
       "type": [
@@ -187,15 +188,8 @@
     "godmode_apollo_creator": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "has_intent_signal_account": {
       "type": [
@@ -221,28 +215,14 @@
     "intent_signal_account": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "intent_strength": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "label_ids": {
       "type": [
@@ -343,41 +323,20 @@
     "organization_headcount_six_month_growth": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "organization_headcount_twelve_month_growth": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "organization_headcount_twenty_four_month_growth": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "organization_id": {
       "type": [
@@ -469,7 +428,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "publicly_traded_exchange": {
       "type": [
@@ -572,32 +532,8 @@
         "object",
         "null"
       ],
-      "properties": {
-        "6913c69d5c848e0001db3166": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "6913c69e5c848e0001db3185": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "6913c69e5c848e0001db319e": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "69de6a786072ac0019b61ffb": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
+      "properties": {},
+      "additionalProperties": true
     },
     "website_url": {
       "type": [

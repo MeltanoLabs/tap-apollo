@@ -7,7 +7,7 @@ Apollo's spec and examples omit many fields, so merging real records fills the g
 Don't commit the samples: they contain customer data.
 
 Fields already in a schema in <out_dir> are only ever widened (new nested fields, integer to
-number, or any value where the data disagrees), so regenerating never narrows a column that
+number, or a string where the data disagrees), so regenerating never narrows a column that
 targets have already created.
 """
 
@@ -125,6 +125,9 @@ def merge(a, b):
 
 # Accepts any JSON value; used for fields that were null in every example.
 ANY_TYPE = ["string", "number", "integer", "boolean", "object", "array", "null"]
+# Objects keyed by team-specific IDs, so their keys can't be listed.
+FREE_FORM_OBJECTS = {"typed_custom_fields", "custom_field_errors"}
+APOLLO_ID = re.compile(r"^[0-9a-f]{24}$")
 STRING_SUFFIXES = ("_at", "_id", "_url", "_cd", "_name", "_reason", "_token", "_date", "_symbol")
 
 
@@ -188,16 +191,31 @@ def widen(old, new):
     return {"type": ANY_TYPE}
 
 
-def open_objects(node):
-    """Give every node that allows an object without listed fields an open `properties`.
+def drop_id_keys(node, key=""):
+    """Drop the listed fields of objects keyed by Apollo IDs, such as custom field values.
 
-    The Singer SDK conforms list items that may be objects as if they had `properties`
-    and crashes without them, so free-form objects get `properties: {}` and keep all
-    their keys through `additionalProperties`.
+    Those keys differ between Apollo teams, so listing them would only fit the team the
+    samples came from.
+    """
+    props = node.get("properties", {})
+    if key in FREE_FORM_OBJECTS or any(APOLLO_ID.match(k) for k in props):
+        node["properties"] = {}
+    for field, child in node.get("properties", {}).items():
+        drop_id_keys(child, field)
+    if isinstance(node.get("items"), dict):
+        drop_id_keys(node["items"])
+
+
+def open_objects(node):
+    """Let every nested object keep keys its schema doesn't list.
+
+    Apollo adds fields without notice, and the SDK drops unlisted keys unless
+    `additionalProperties` is set. It also conforms list items that may be objects as if
+    they had `properties` and crashes without them, so objects always get `properties`.
     """
     types = node.get("type", [])
-    if "object" in (types if isinstance(types, list) else [types]) and "properties" not in node:
-        node["properties"] = {}
+    if "object" in (types if isinstance(types, list) else [types]):
+        node.setdefault("properties", {})
         node["additionalProperties"] = True
     for child in node.get("properties", {}).values():
         open_objects(child)
@@ -255,8 +273,17 @@ for name, (method, path, key) in STREAMS.items():
         previous = {}
     for field, old in previous.items():
         schema["properties"][field] = widen(old, schema["properties"].get(field))
+    for field, prop in schema["properties"].items():
+        if field in FREE_FORM_OBJECTS:
+            schema["properties"][field] = {"type": ["object", "null"]}
+        elif base_types(prop) >= set(ANY_TYPE) - {"null"}:
+            # A column that allows both objects and scalars breaks some targets (target-postgres
+            # makes it jsonb, then rejects plain strings), so the tap emits these as strings,
+            # JSON-encoding any other value.
+            schema["properties"][field] = {"type": ["string", "null"]}
     schema["properties"]["id"] = {"type": "string"}
-    for prop in schema["properties"].values():
+    for field, prop in schema["properties"].items():
+        drop_id_keys(prop, field)
         open_objects(prop)
     schema["type"] = "object"
     schema = {"$schema": "https://json-schema.org/draft/2020-12/schema", **schema}

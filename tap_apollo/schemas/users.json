@@ -11,15 +11,8 @@
     "ai_credit_limit": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "apollo_everywhere_search_count": {
       "type": [
@@ -310,33 +303,20 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "auto_open_linkedin_on_connect": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "auto_open_linkedin_on_dial": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "bridge_calls": {
       "type": [
@@ -353,28 +333,14 @@
     "bridge_incoming_phone_number": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "bridge_phone_number": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "call_recording_mode_cd": {
       "type": [
@@ -458,15 +424,8 @@
     "conversation_is_private": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "cookie_consent_data": {
       "type": [
@@ -492,7 +451,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "created_at": {
       "type": [
@@ -504,28 +464,14 @@
     "credit_limit": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "credit_limit_interval": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "credits_awarded_for": {
       "type": [
@@ -538,41 +484,20 @@
     "crm_email": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "crm_requested_to_integrate": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "crm_username": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "current_email_verified": {
       "type": [
@@ -631,15 +556,8 @@
     "default_cockpit_layout": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "default_contact_overview_layout_id": {
       "type": [
@@ -704,28 +622,14 @@
     "direct_dial_credit_limit": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "disable_email_linking": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "dismiss_new_team_suggestion": {
       "type": [
@@ -780,28 +684,14 @@
     "enable_gmail_desktop_notifications": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "enable_one_click_unsubscribe": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "enable_open_tracking": {
       "type": [
@@ -823,20 +713,14 @@
           "properties": {},
           "additionalProperties": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "export_credit_limit": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "fields_fully_loaded": {
       "type": [
@@ -1055,15 +939,8 @@
     "linked_salesforce": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "linked_salesloft": {
       "type": [
@@ -1086,15 +963,8 @@
     "manager_source": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "manager_user_id": {
       "type": [
@@ -1125,15 +995,8 @@
     "onboarding_survey": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "onboarding_use_cases": {
       "type": [
@@ -1171,7 +1034,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "opt_out_html_template": {
       "type": [
@@ -1244,28 +1108,14 @@
     "request_email_change_to": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "salesforce_account": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "salesforce_id": {
       "type": [
@@ -1282,15 +1132,8 @@
     "self_identified_persona": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "should_include_unsubscribe_link": {
       "type": [
@@ -1429,12 +1272,7 @@
     },
     "typed_custom_fields": {
       "type": [
-        "string",
-        "number",
-        "integer",
-        "boolean",
         "object",
-        "array",
         "null"
       ],
       "properties": {},
@@ -1449,15 +1287,8 @@
     "zp_is_super_analytics_user": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     }
   }
 }

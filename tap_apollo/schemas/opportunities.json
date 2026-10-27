@@ -119,7 +119,8 @@
                 ],
                 "format": "date-time"
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "account_rule_config_statuses": {
@@ -183,7 +184,8 @@
                 ],
                 "format": "date-time"
               }
-            }
+            },
+            "additionalProperties": true
           }
         },
         "account_stage_id": {
@@ -234,7 +236,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "additionalProperties": true
         },
         "contact_emailer_campaign_ids": {
           "type": [
@@ -473,7 +476,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "additionalProperties": true
         },
         "publicly_traded_exchange": {
           "type": [
@@ -528,32 +532,8 @@
             "object",
             "null"
           ],
-          "properties": {
-            "6913c69d5c848e0001db3166": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6913c69e5c848e0001db3185": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "6913c69e5c848e0001db319e": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "69de6a786072ac0019b61ffb": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "properties": {},
+          "additionalProperties": true
         },
         "website_url": {
           "type": [
@@ -646,7 +626,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "account_id": {
       "type": [
@@ -745,20 +726,14 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "current_solutions": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "deal_probability": {
       "type": [
@@ -769,28 +744,14 @@
     "deal_source": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "description": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "exchange_rate_code": {
       "type": [
@@ -846,28 +807,14 @@
     "manually_updated_forecast": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "manually_updated_probability": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "name": {
       "type": [
@@ -878,15 +825,8 @@
     "next_step": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "next_step_date": {
       "type": [
@@ -967,15 +907,8 @@
     "probability": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "salesforce_id": {
       "type": [
@@ -1019,15 +952,8 @@
         "object",
         "null"
       ],
-      "properties": {
-        "69d910bdde9379001db1a438": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        }
-      }
+      "properties": {},
+      "additionalProperties": true
     }
   }
 }

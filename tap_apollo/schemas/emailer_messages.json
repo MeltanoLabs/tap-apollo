@@ -11,15 +11,8 @@
     "ai_variables_status": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "appendment_html": {
       "type": [
@@ -104,28 +97,14 @@
     "bounce": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "campaign_max_emails_per_day": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "campaign_name": {
       "type": [
@@ -199,15 +178,8 @@
     "demoed": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "domain_enforcement_action": {
       "type": [
@@ -313,15 +285,8 @@
     "personalized_opener": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "provider_message_id": {
       "type": [
@@ -376,34 +341,21 @@
               "null"
             ]
           }
-        }
+        },
+        "additionalProperties": true
       }
     },
     "replied": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "reply_class": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "schedule_delayed_limit_reason": {
       "type": [
@@ -420,15 +372,8 @@
     "schedule_delayed_reason_details": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "send_from": {
       "type": [
@@ -466,7 +411,8 @@
             "null"
           ]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "send_from_info": {
       "type": [
@@ -477,15 +423,8 @@
     "sensitive_info_redacted": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "signature_html": {
       "type": [
@@ -496,15 +435,8 @@
     "spam_blocked": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "status": {
       "type": [
@@ -515,15 +447,8 @@
     "step_max_emails_per_day": {
       "type": [
         "string",
-        "number",
-        "integer",
-        "boolean",
-        "object",
-        "array",
         "null"
-      ],
-      "properties": {},
-      "additionalProperties": true
+      ]
     },
     "subject": {
       "type": [

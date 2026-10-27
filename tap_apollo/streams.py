@@ -76,7 +76,7 @@ class ContactsStream(ApolloStream):
         Returns:
             The record, or ``None`` if it predates the bookmark.
         """
-        return None if self._is_stale(row) else row
+        return None if self._is_stale(row) else super().post_process(row, context)
 
 
 class AccountsStream(ApolloStream):

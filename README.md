@@ -46,12 +46,18 @@ outreach emails) plus workspace reference data, through the
   spec leaves out many fields. Fields not in a schema are dropped, with a warning. To
   pick up new fields, save a sample of records per stream (one `<stream>.json` array
   each, kept out of git since they hold customer data) and rerun the script. Existing
-  fields are only ever widened, never narrowed:
+  fields are only ever widened, never narrowed. Nested objects keep keys their schema
+  doesn't list, such as custom field values keyed by ID:
 
   ```bash
   curl -sSLo spec.json https://docs.apollo.io/openapi/apollo-rest-api.json
   python scripts/gen_schemas.py spec.json tap_apollo/schemas path/to/samples
   ```
+- **Fields with varying types are strings.** Where Apollo returns a field as different
+  types (say, a string in one record and an object in another), or the type is unknown
+  because it was null in every sample, the field is declared as a string, and values of
+  other types are emitted JSON-encoded (`true`, `{"title": "CTO"}`). A column that mixes
+  objects and plain values breaks some targets.
 
 ## Configuration
 
