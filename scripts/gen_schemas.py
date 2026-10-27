@@ -1,6 +1,14 @@
 """Generate tap-apollo stream JSON schemas from Apollo's OpenAPI spec.
 
-Usage: python -I gen_schemas.py <spec.json> <out_dir>
+Usage: python -I gen_schemas.py <spec.json> <out_dir> [<samples_dir>]
+
+<samples_dir> optionally holds real API records, one `<stream>.json` array per stream.
+Apollo's spec and examples omit many fields, so merging real records fills the gaps.
+Don't commit the samples: they contain customer data.
+
+Fields already in a schema in <out_dir> are only ever widened (new nested fields, integer to
+number, or any value where the data disagrees), so regenerating never narrows a column that
+targets have already created.
 """
 
 import json
@@ -10,6 +18,7 @@ from datetime import datetime
 
 spec = json.load(open(sys.argv[1]))
 out_dir = sys.argv[2]
+samples_dir = sys.argv[3] if len(sys.argv) > 3 else None
 
 # stream name -> (method, path, records key or None for top-level array)
 STREAMS = {
@@ -111,7 +120,7 @@ def merge(a, b):
         if a.get("format") != b.get("format"):
             out.pop("format", None)
         return out
-    return {}  # conflicting types: leave untyped
+    return {"type": "any"}  # conflicting types: accept any value
 
 
 # Accepts any JSON value; used for fields that were null in every example.
@@ -131,7 +140,7 @@ def guess_type(key):
 def finalize(node, key=""):
     """Make every node nullable; untyped nodes accept any JSON value."""
     typ = node.get("type") or guess_type(key)
-    if typ is None:
+    if typ is None or typ == "any":
         return {"type": ANY_TYPE}
     out = {"type": [typ, "null"]}
     if typ == "object":
@@ -146,6 +155,54 @@ def finalize(node, key=""):
         if node.get("format") == "date-time" or key.endswith("_at"):
             out["format"] = "date-time"
     return out
+
+
+def base_types(node):
+    types = node.get("type", [])
+    return set(types if isinstance(types, list) else [types]) - {"null"}
+
+
+def widen(old, new):
+    """Combine an existing field definition with a regenerated one without narrowing it.
+
+    The result keeps every type and nested field `old` allows. It only gains nested fields,
+    widens integer to number, or accepts any value where the two disagree.
+    """
+    if not new:
+        return old
+    old_types, new_types = base_types(old), base_types(new)
+    if old_types >= set(ANY_TYPE) - {"null"}:
+        return old
+    if old_types == new_types:
+        out = dict(old)
+        if "object" in old_types and "properties" in new:
+            props = dict(old.get("properties", {}))
+            for field, sub_new in new["properties"].items():
+                props[field] = widen(props[field], sub_new) if field in props else sub_new
+            out["properties"] = props
+        if "array" in old_types and "items" in old and "items" in new:
+            out["items"] = widen(old["items"], new["items"])
+        return out
+    if old_types | new_types == {"integer", "number"}:
+        return {"type": ["number", "null"]}
+    return {"type": ANY_TYPE}
+
+
+def open_objects(node):
+    """Give every node that allows an object without listed fields an open `properties`.
+
+    The Singer SDK conforms list items that may be objects as if they had `properties`
+    and crashes without them, so free-form objects get `properties: {}` and keep all
+    their keys through `additionalProperties`.
+    """
+    types = node.get("type", [])
+    if "object" in (types if isinstance(types, list) else [types]) and "properties" not in node:
+        node["properties"] = {}
+        node["additionalProperties"] = True
+    for child in node.get("properties", {}).values():
+        open_objects(child)
+    if isinstance(node.get("items"), dict):
+        open_objects(node["items"])
 
 
 def examples(op):
@@ -182,10 +239,25 @@ for name, (method, path, key) in STREAMS.items():
         records = ex if key is None else (ex or {}).get(key, [])
         for rec in records or []:
             item = merge(item, infer(rec))
+    if samples_dir:
+        try:
+            samples = json.load(open(f"{samples_dir}/{name}.json"))
+        except FileNotFoundError:
+            samples = []
+        for rec in samples:
+            item = merge(item, infer(rec))
     schema = finalize(item)
     if not schema.get("properties"):
         sys.exit(f"no properties found for {name}")
+    try:
+        previous = json.load(open(f"{out_dir}/{name}.json"))["properties"]
+    except FileNotFoundError:
+        previous = {}
+    for field, old in previous.items():
+        schema["properties"][field] = widen(old, schema["properties"].get(field))
     schema["properties"]["id"] = {"type": "string"}
+    for prop in schema["properties"].values():
+        open_objects(prop)
     schema["type"] = "object"
     schema = {"$schema": "https://json-schema.org/draft/2020-12/schema", **schema}
     with open(f"{out_dir}/{name}.json", "w") as fh:

@@ -2,6 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "added_contact_to_sequence": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "ai_credit_limit": {
       "type": [
         "string",
@@ -11,11 +17,19 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "apollo_everywhere_search_count": {
       "type": [
         "integer",
+        "null"
+      ]
+    },
+    "apple_user_id": {
+      "type": [
+        "string",
         "null"
       ]
     },
@@ -57,7 +71,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "inactive_contact_stage_ids": {
@@ -74,26 +90,34 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "insight_deal_size_signals": {
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "insight_sale_cycle_signals": {
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "insight_win_rate_signals": {
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "is_persona_recommendation_requested": {
           "type": [
@@ -115,7 +139,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "job_posting_titles": {
@@ -132,7 +158,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "key": {
@@ -197,7 +225,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "team_id": {
@@ -220,7 +250,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "territory_company_size_ranges": {
@@ -237,7 +269,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "territory_location_override": {
@@ -278,6 +312,32 @@
         }
       }
     },
+    "auto_open_linkedin_on_connect": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "auto_open_linkedin_on_dial": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "bridge_calls": {
       "type": [
         "boolean",
@@ -299,7 +359,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "bridge_phone_number": {
       "type": [
@@ -309,6 +371,14 @@
         "boolean",
         "object",
         "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "call_recording_mode_cd": {
+      "type": [
+        "string",
         "null"
       ]
     },
@@ -372,6 +442,13 @@
         "null"
       ]
     },
+    "chrome_extension_used_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
     "connected_to_slack": {
       "type": [
         "boolean",
@@ -387,7 +464,35 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "cookie_consent_data": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "cookie_policy_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cookie_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cookie_timestamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
     },
     "created_at": {
       "type": [
@@ -405,7 +510,30 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "credit_limit_interval": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "credits_awarded_for": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "crm_email": {
       "type": [
@@ -416,7 +544,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "crm_requested_to_integrate": {
       "type": [
@@ -427,11 +557,32 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "crm_username": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "current_email_verified": {
       "type": [
         "boolean",
+        "null"
+      ]
+    },
+    "current_onboarding_step": {
+      "type": [
+        "string",
         "null"
       ]
     },
@@ -486,9 +637,23 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "default_contact_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_crm_home_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_gen_pipe_home_overview_layout_id": {
       "type": [
         "string",
         "null"
@@ -524,6 +689,12 @@
         "null"
       ]
     },
+    "default_win_close_home_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "deleted": {
       "type": [
         "boolean",
@@ -539,7 +710,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "disable_email_linking": {
       "type": [
@@ -550,13 +723,29 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "dismiss_new_team_suggestion": {
       "type": [
         "boolean",
         "null"
       ]
+    },
+    "dismissed_invite_banner_on_the_manage_users_page_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "dismissed_invite_banner_on_the_search_page_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "email": {
       "type": [
@@ -565,6 +754,12 @@
       ]
     },
     "email_oauth_signin_only": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "emailer_campaign_created": {
       "type": [
         "boolean",
         "null"
@@ -591,7 +786,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "enable_one_click_unsubscribe": {
       "type": [
@@ -602,13 +799,31 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "enable_open_tracking": {
       "type": [
         "boolean",
         "null"
       ]
+    },
+    "excluded_csv_columns": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "contact": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        }
+      }
     },
     "export_credit_limit": {
       "type": [
@@ -619,7 +834,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "fields_fully_loaded": {
       "type": [
@@ -639,7 +856,31 @@
         "null"
       ]
     },
+    "has_approved_emailer_campaign": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_completed_news_onboarding": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "has_conference_account": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_created_rule_config": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_feed_call_to_action": {
       "type": [
         "boolean",
         "null"
@@ -651,7 +892,91 @@
         "null"
       ]
     },
+    "has_hidden_persona_creation_dialog": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_rules_engine_template_widget": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_rules_engine_templates_library": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_rules_engine_transition_banner": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_template_library_permission_banner": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "has_invited_user": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_placeholder_email": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_crm_mapping_toasters": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_crm_stage_mapping_reminders": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_intent_data_settings_page_banner": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_intent_data_topic_save_limit_dialog": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_persona_onboarding": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_rules_engine_template_promo": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_seen_sequences_unresponsive_contacts_nudge": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_tried_plays": {
       "type": [
         "boolean",
         "null"
@@ -669,8 +994,27 @@
         "null"
       ]
     },
+    "has_visited_enrichment": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_visited_recommendations": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "id": {
       "type": "string"
+    },
+    "last_logged_in": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "last_name": {
       "type": [
@@ -717,7 +1061,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "linked_salesloft": {
       "type": [
@@ -728,6 +1074,31 @@
     "linked_zoom_conference_account": {
       "type": [
         "boolean",
+        "null"
+      ]
+    },
+    "main_emailer_campaign_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manager_source": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "manager_user_id": {
+      "type": [
+        "string",
         "null"
       ]
     },
@@ -751,6 +1122,57 @@
       ],
       "format": "date-time"
     },
+    "onboarding_survey": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "onboarding_use_cases": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "download_leads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ext_dismiss_contact_tooltips": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ext_has_added_li_contact": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "searched_companies": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "searched_people": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
     "opt_out_html_template": {
       "type": [
         "string",
@@ -764,6 +1186,18 @@
       ]
     },
     "permission_set_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prefer_top_nav": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "preferred_side_nav_state": {
       "type": [
         "string",
         "null"
@@ -783,7 +1217,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "record_calls": {
@@ -798,6 +1234,13 @@
         "null"
       ]
     },
+    "rendered_invite_banner_on_the_search_page_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
     "request_email_change_to": {
       "type": [
         "string",
@@ -807,7 +1250,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "salesforce_account": {
       "type": [
@@ -818,7 +1263,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "salesforce_id": {
       "type": [
@@ -841,7 +1288,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "should_include_unsubscribe_link": {
       "type": [
@@ -861,6 +1310,24 @@
         "null"
       ]
     },
+    "show_link_google_mailbox_page": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "skip_onboarding_with_ai_workflow": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "skip_use_case_selection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "subteam_ids": {
       "type": [
         "array",
@@ -875,7 +1342,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "sync_crm_id": {
@@ -902,6 +1371,18 @@
         "null"
       ]
     },
+    "territory_match_mode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "time_zone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "title": {
       "type": [
         "string",
@@ -922,7 +1403,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "triggered_referral_campaigns": {
@@ -939,7 +1422,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "typed_custom_fields": {
@@ -951,7 +1436,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "zp_contact_id": {
       "type": [
@@ -968,7 +1455,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     }
   }
 }

@@ -2,6 +2,320 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "account": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "account_playbook_statuses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "account_stage_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "creator_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "custom_field_errors": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "domain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "existence_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facebook_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "godmode_apollo_creator": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "hubspot_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hubspot_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent_strength": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "label_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "last_activity_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "linkedin_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization_headcount_six_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "organization_headcount_twelve_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "organization_headcount_twenty_four_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "organization_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanitized_phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "show_intent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_display_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggested_from_rule_engine_config_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "team_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "twitter_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "typed_custom_fields": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "6913c69e5c848e0001db319e": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
     "account_id": {
       "type": [
         "string",
@@ -14,7 +328,26 @@
         "null"
       ]
     },
+    "blocklisted": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "call_identifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "caller_name": {
       "type": [
         "string",
         "null"
@@ -47,7 +380,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "call_opted_out": {
           "type": [
@@ -58,7 +393,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "city": {
           "type": [
@@ -98,7 +435,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "email_sha256": {
                 "type": [
@@ -133,7 +472,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "free_domain": {
                 "type": [
@@ -173,8 +514,22 @@
                     "object",
                     "array",
                     "null"
-                  ]
+                  ],
+                  "properties": {},
+                  "additionalProperties": true
                 }
+              },
+              "email_domain_catchall": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "email_domain_catchall_verdict": {
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             }
           }
@@ -193,7 +548,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "contact_stage_id": {
@@ -248,7 +605,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "direct_dial_enrichment_failed_at": {
           "type": [
@@ -266,7 +625,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "email": {
           "type": [
@@ -295,7 +656,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "email_source": {
           "type": [
@@ -306,7 +669,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "email_status": {
           "type": [
@@ -335,7 +700,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "emailer_campaign_ids": {
           "type": [
@@ -351,7 +718,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "existence_level": {
@@ -369,7 +738,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "facebook_url": {
           "type": [
@@ -410,7 +781,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "hubspot_company_id": {
           "type": [
@@ -427,7 +800,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "id": {
           "type": [
@@ -449,7 +824,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "last_activity_date": {
@@ -474,7 +851,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "linkedin_url": {
           "type": [
@@ -491,7 +870,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "name": {
           "type": [
@@ -538,7 +919,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "person_id": {
           "type": [
@@ -566,13 +949,23 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "dnc_other_info": {
                 "type": [
                   "object",
                   "null"
-                ]
+                ],
+                "properties": {
+                  "country": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
               },
               "dnc_status": {
                 "type": [
@@ -583,7 +976,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "position": {
                 "type": [
@@ -641,8 +1036,16 @@
                     "object",
                     "array",
                     "null"
-                  ]
+                  ],
+                  "properties": {},
+                  "additionalProperties": true
                 }
+              },
+              "dnc_country_supported": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
               }
             }
           }
@@ -662,7 +1065,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "queued_for_crm_push": {
           "type": [
@@ -745,7 +1150,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "twitter_url": {
           "type": [
@@ -757,7 +1164,15 @@
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {
+            "6913c69d5c848e0001db3149": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         },
         "updated_at": {
           "type": [
@@ -769,6 +1184,107 @@
         "updated_email_true_status": {
           "type": [
             "boolean",
+            "null"
+          ]
+        },
+        "directory_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_domain_catchall_verdict": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "formatted_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "godmode_apollo_creator": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "hubspot_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent_strength": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "outbound_subscriptions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "postal_code": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "street_address": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "time_zone": {
+          "type": [
+            "string",
             "null"
           ]
         }
@@ -786,6 +1302,18 @@
         "null"
       ]
     },
+    "credits": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "destination_country_display_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "duration": {
       "type": [
         "integer",
@@ -798,6 +1326,12 @@
         "null"
       ],
       "format": "date-time"
+    },
+    "from_country": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "from_number": {
       "type": [
@@ -841,7 +1375,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "note_text": {
       "type": [
@@ -879,7 +1415,32 @@
         "null"
       ]
     },
+    "phone_number_block_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recording_stopped_by_rep": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "recording_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "region_called_to": {
       "type": [
         "string",
         "null"
@@ -891,6 +1452,19 @@
         "null"
       ]
     },
+    "source": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "start_time": {
       "type": [
         "string",
@@ -899,6 +1473,12 @@
       "format": "date-time"
     },
     "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "to_country": {
       "type": [
         "string",
         "null"
@@ -937,13 +1517,41 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "twilio_call_sid": {
       "type": [
         "string",
         "null"
       ]
+    },
+    "twilio_error_code": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "twilio_error_message": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "twilio_recording_sid": {
       "type": [

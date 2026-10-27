@@ -16,7 +16,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "active": {
@@ -25,11 +27,63 @@
         "null"
       ]
     },
+    "allowed_send_from_domains": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
+    },
     "archived": {
       "type": [
         "boolean",
         "null"
       ]
+    },
+    "auto_pause_bounce_rate": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "auto_pause_warning_level": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "auto_paused_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "bcc_emails": {
       "type": [
@@ -37,9 +91,15 @@
         "null"
       ]
     },
+    "block_manual_enrollments": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "bounce_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -51,15 +111,74 @@
     },
     "click_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
+    },
+    "click_rate_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "click_rate_unfiltered": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "click_rate_unfiltered_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "contact_email_event_to_stage_mapping": {
       "type": [
         "object",
         "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "content_center_type": {
+      "type": [
+        "string",
+        "null"
       ]
+    },
+    "context_card_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
     },
     "create_task_if_email_open": {
       "type": [
@@ -88,9 +207,41 @@
     },
     "demo_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "dmp_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
     },
     "email_open_trigger_task_threshold": {
       "type": [
@@ -103,6 +254,50 @@
         "string",
         "null"
       ]
+    },
+    "emailer_steps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "position": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wait_mode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wait_time": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        }
+      }
     },
     "excluded_account_stage_ids": {
       "type": [
@@ -136,12 +331,18 @@
     },
     "hard_bounce_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "id": {
       "type": "string"
+    },
+    "ignore_apollo_global_email_bounce_list": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "is_performing_poorly": {
       "type": [
@@ -186,6 +387,19 @@
         "null"
       ]
     },
+    "mark_finished_if_phone_call_connected": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "mark_finished_if_reply": {
       "type": [
         "boolean",
@@ -207,7 +421,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "name": {
       "type": [
@@ -227,13 +443,57 @@
         "null"
       ]
     },
-    "open_rate": {
+    "object_owner_id": {
       "type": [
-        "integer",
+        "string",
         "null"
       ]
     },
+    "open_rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "open_rate_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "open_rate_unfiltered": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "open_rate_unfiltered_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "opt_out_rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "overdue_manual_tasks_count": {
       "type": [
         "integer",
         "null"
@@ -248,7 +508,21 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "product_profile_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "remind_ab_test_results": {
       "type": [
@@ -258,7 +532,7 @@
     },
     "reply_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -283,7 +557,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "sequence_ruleset_id": {
       "type": [
@@ -399,7 +675,7 @@
     },
     "spam_block_rate": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -414,6 +690,12 @@
           "null"
         ]
       }
+    },
+    "status_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "underperforming_touches_count": {
       "type": [
@@ -433,11 +715,43 @@
         "null"
       ]
     },
+    "unique_clicked_unfiltered": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
     "unique_delivered": {
       "type": [
         "integer",
         "null"
       ]
+    },
+    "unique_delivered_click_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "unique_delivered_open_tracked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "unique_demoed": {
       "type": [
@@ -452,6 +766,12 @@
       ]
     },
     "unique_opened": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_opened_unfiltered": {
       "type": [
         "integer",
         "null"

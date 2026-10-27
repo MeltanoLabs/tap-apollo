@@ -10,7 +10,7 @@
     },
     "display_order": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -61,7 +61,7 @@
     },
     "probability": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },

@@ -177,3 +177,19 @@ def test_other_422s_are_not_retried() -> None:
 
     with pytest.raises(FatalAPIError):
         get_records(make_tap(), "accounts")
+
+
+
+
+@responses.activate
+def test_free_form_list_items_are_kept() -> None:
+    contact = {
+        "id": "c1",
+        "updated_at": "2026-03-02T00:00:00.000Z",
+        "contact_emails": [{"email": "a@example.com", "position": 0}],
+    }
+    responses.post(f"{BASE}/contacts/search", json=page("contacts", [contact], 1, 1))
+
+    records = get_records(make_tap(), "contacts")
+
+    assert records[0]["contact_emails"] == contact["contact_emails"]

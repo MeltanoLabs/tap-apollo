@@ -52,7 +52,9 @@
                     "object",
                     "array",
                     "null"
-                  ]
+                  ],
+                  "properties": {},
+                  "additionalProperties": true
                 }
               },
               "created_at": {
@@ -212,7 +214,27 @@
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {
+            "active": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "not_sent": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "paused": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
         },
         "contact_emailer_campaign_ids": {
           "type": [
@@ -228,7 +250,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "created_at": {
@@ -271,7 +295,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "domain": {
           "type": [
@@ -501,9 +527,120 @@
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {
+            "6913c69d5c848e0001db3166": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6913c69e5c848e0001db3185": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6913c69e5c848e0001db319e": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "69de6a786072ac0019b61ffb": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         },
         "website_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "godmode_apollo_creator": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "hubspot_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "naics_codes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "postal_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sic_codes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "street_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggested_from_rule_engine_config_id": {
           "type": [
             "string",
             "null"
@@ -525,13 +662,13 @@
     },
     "amount": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
     "amount_in_team_currency": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -619,11 +756,13 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "deal_probability": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -636,7 +775,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "description": {
       "type": [
@@ -647,7 +788,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "exchange_rate_code": {
       "type": [
@@ -657,7 +800,7 @@
     },
     "exchange_rate_value": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },
@@ -709,7 +852,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "manually_updated_probability": {
       "type": [
@@ -720,7 +865,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "name": {
       "type": [
@@ -737,7 +884,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "next_step_date": {
       "type": [
@@ -766,8 +915,17 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
+    },
+    "opportunity_created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "opportunity_pipeline_id": {
       "type": [
@@ -789,7 +947,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "opportunity_stage_id": {
@@ -813,7 +973,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "salesforce_id": {
       "type": [
@@ -856,7 +1018,16 @@
       "type": [
         "object",
         "null"
-      ]
+      ],
+      "properties": {
+        "69d910bdde9379001db1a438": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
     }
   }
 }

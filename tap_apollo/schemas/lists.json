@@ -8,6 +8,31 @@
         "null"
       ]
     },
+    "access_type_cd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "book_of_business": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "book_of_business_finder_view_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "cached_count": {
       "type": [
         "integer",
@@ -18,7 +43,9 @@
       "type": [
         "object",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "created_at": {
       "type": [
@@ -27,8 +54,26 @@
       ],
       "format": "date-time"
     },
+    "default_finder_view_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disable_cached_count_pusher": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "id": {
       "type": "string"
+    },
+    "is_default": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "key": {
       "type": [
@@ -54,6 +99,12 @@
         "null"
       ]
     },
+    "need_cached_count_update_caller_line": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "needs_count_update_at": {
       "type": [
         "string",
@@ -62,6 +113,12 @@
       "format": "date-time"
     },
     "rule_config_template_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shared_by_id": {
       "type": [
         "string",
         "null"
@@ -81,6 +138,12 @@
       "format": "date-time"
     },
     "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visibility_cd": {
       "type": [
         "string",
         "null"

@@ -26,6 +26,12 @@
         ]
       }
     },
+    "block_sending_for_unhealthy_domain": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "created_at": {
       "type": [
         "string",
@@ -53,55 +59,55 @@
         },
         "avg_click_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_daily_sent": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_delivered_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_hard_bounce_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_open_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_reply_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_spam_block_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "avg_unsubscribe_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "click_rate_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -114,7 +120,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "created_at": {
           "type": [
@@ -125,7 +133,7 @@
         },
         "daily_email_sent_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -143,19 +151,19 @@
         },
         "deliverability_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "domain_health_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "email_account_domain_age_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -167,7 +175,7 @@
         },
         "hard_bounce_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -185,7 +193,7 @@
         },
         "open_rate_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -197,61 +205,61 @@
         },
         "reply_rate_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "spam_block_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_clicked_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_delivered_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_hard_bounced_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_opened_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_replied_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_sent_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_spam_blocked_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "sum_unsubscribed_count": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -263,7 +271,7 @@
         },
         "unsubscribe_rate_score": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
@@ -279,8 +287,26 @@
             "string",
             "null"
           ]
+        },
+        "sum_delivered_clicked_tracked_count": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sum_delivered_open_tracked_count": {
+          "type": [
+            "number",
+            "null"
+          ]
         }
       }
+    },
+    "domain_enforcement_action": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "email": {
       "type": [
@@ -315,6 +341,25 @@
         "null"
       ]
     },
+    "inbox_placement_test_health_status": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "is_free_domain": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "is_opted_in_mailwarming": {
       "type": [
         "boolean",
@@ -343,7 +388,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "mailwarming_eta": {
       "type": [
@@ -354,7 +401,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "mailwarming_max": {
       "type": [
@@ -404,11 +453,202 @@
         "null"
       ]
     },
+    "mailwarming_vendor": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "always_warmup_enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "billing": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "billing_cycle": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "cost": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "credit_type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "last_billed_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "next_billing_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            }
+          }
+        },
+        "bulk_warmup_blocked_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bulk_warmup_ready": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "completion_percent": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "daily_reply_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "disallowed_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inbox_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inbox_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "max_daily_emails": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "min_daily_emails": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "progress_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reconnect": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "recovery": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "schedule_last_updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "schedule_shift_days": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unique_string": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        }
+      }
+    },
     "max_outbound_emails_per_hour": {
       "type": [
         "integer",
         "null"
       ]
+    },
+    "needs_reauth_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "nudge_user_to_send_mails": {
       "type": [
@@ -425,7 +665,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "nylas_provider": {
       "type": [
@@ -436,7 +678,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "provider_display_name": {
       "type": [
@@ -466,7 +710,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "sendgrid_api_user": {
       "type": [
@@ -477,6 +723,14 @@
         "object",
         "array",
         "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "show_new_domain_warning": {
+      "type": [
+        "boolean",
+        "null"
       ]
     },
     "signature_edit_disabled": {
@@ -486,6 +740,12 @@
       ]
     },
     "signature_html": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tracking_domain_id": {
       "type": [
         "string",
         "null"
@@ -537,7 +797,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "true_warmup_thresholds": {
       "type": [
@@ -547,25 +809,25 @@
       "properties": {
         "bounce_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "open_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "reply_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         },
         "spam_block_rate": {
           "type": [
-            "integer",
+            "number",
             "null"
           ]
         }
@@ -577,7 +839,31 @@
         "null"
       ]
     },
+    "unlink_error_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unlink_error_message": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "warmup_source": {
       "type": [
         "string",
         "null"

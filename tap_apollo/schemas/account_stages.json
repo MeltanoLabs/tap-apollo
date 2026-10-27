@@ -22,7 +22,7 @@
     },
     "display_order": {
       "type": [
-        "integer",
+        "number",
         "null"
       ]
     },

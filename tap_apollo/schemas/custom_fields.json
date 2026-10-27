@@ -2,6 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "action_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "additional_mapped_crm_field": {
       "type": [
         "string",
@@ -10,6 +16,71 @@
         "boolean",
         "object",
         "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "associated_modality": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "autorun_downstream_enrichment": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "connector_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "content_center_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "context_card_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
+    },
+    "dynamic_field_type": {
+      "type": [
+        "string",
         "null"
       ]
     },
@@ -27,13 +98,64 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
+    },
+    "finder_views": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
+    },
+    "has_legacy_input_variable_mappings": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "id": {
       "type": "string"
     },
+    "is_ai_field": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_dynamic_field": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_formula_field": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "is_local": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_readonly": {
       "type": [
         "boolean",
         "null"
@@ -45,6 +167,32 @@
         "null"
       ]
     },
+    "json_schema": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "last_run_status": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "mapped_crm_field": {
       "type": [
         "string",
@@ -54,7 +202,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "mirrored": {
       "type": [
@@ -74,6 +224,12 @@
         "null"
       ]
     },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "picklist_options": {
       "type": [
         "array",
@@ -88,7 +244,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "picklist_options_last_synced_at": {
@@ -137,7 +295,9 @@
             "type": [
               "object",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           },
           "name": {
             "type": [
@@ -147,6 +307,43 @@
           }
         }
       }
+    },
+    "product_profile_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "project_workspace_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recipe_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schedule_info": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "system_name": {
       "type": [
@@ -163,7 +360,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "type": {
       "type": [

@@ -16,7 +16,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "account_rule_config_statuses": {
@@ -33,10 +35,30 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "account_stage_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "alexa_ranking": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "angellist_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "city": {
       "type": [
         "string",
         "null"
@@ -46,7 +68,33 @@
       "type": [
         "object",
         "null"
-      ]
+      ],
+      "properties": {
+        "active": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "finished": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "not_sent": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "paused": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
     },
     "contact_emailer_campaign_ids": {
       "type": [
@@ -62,8 +110,16 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
+    },
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "created_at": {
       "type": [
@@ -90,11 +146,19 @@
         "null"
       ]
     },
+    "crunchbase_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "custom_field_errors": {
       "type": [
         "object",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "domain": {
       "type": [
@@ -108,6 +172,31 @@
         "null"
       ]
     },
+    "facebook_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "founded_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "godmode_apollo_creator": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "has_intent_signal_account": {
       "type": [
         "boolean",
@@ -115,6 +204,12 @@
       ]
     },
     "hubspot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hubspot_record_url": {
       "type": [
         "string",
         "null"
@@ -132,9 +227,36 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "intent_strength": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "label_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "languages": {
       "type": [
         "array",
         "null"
@@ -152,7 +274,25 @@
         "null"
       ]
     },
+    "linkedin_uid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "linkedin_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "logo_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "market_cap": {
       "type": [
         "string",
         "null"
@@ -163,6 +303,18 @@
         "string",
         "null"
       ]
+    },
+    "naics_codes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "name": {
       "type": [
@@ -176,7 +328,82 @@
         "null"
       ]
     },
+    "organization_city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_country": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_headcount_six_month_growth": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "organization_headcount_twelve_month_growth": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "organization_headcount_twenty_four_month_growth": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "organization_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_postal_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_raw_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organization_street_address": {
       "type": [
         "string",
         "null"
@@ -212,6 +439,56 @@
         "null"
       ]
     },
+    "postal_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primary_domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primary_phone": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "number": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanitized_number": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "publicly_traded_exchange": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publicly_traded_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "salesforce_id": {
       "type": [
         "string",
@@ -230,6 +507,18 @@
         "null"
       ]
     },
+    "sic_codes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
     "source": {
       "type": [
         "string",
@@ -242,7 +531,37 @@
         "null"
       ]
     },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "street_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "suggest_location_enrichment": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "suggested_from_rule_engine_config_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "twitter_url": {
       "type": [
         "string",
         "null"
@@ -251,6 +570,38 @@
     "typed_custom_fields": {
       "type": [
         "object",
+        "null"
+      ],
+      "properties": {
+        "6913c69d5c848e0001db3166": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "6913c69e5c848e0001db3185": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "6913c69e5c848e0001db319e": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "69de6a786072ac0019b61ffb": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "website_url": {
+      "type": [
+        "string",
         "null"
       ]
     }

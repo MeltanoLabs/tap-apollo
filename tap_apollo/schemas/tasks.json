@@ -22,7 +22,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "account_queues": {
@@ -39,7 +41,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "account_rule_config_statuses": {
@@ -56,7 +60,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "account_stage_id": {
@@ -99,7 +105,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "domain": {
           "type": [
@@ -140,7 +148,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "label_ids": {
           "type": [
@@ -156,7 +166,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "linkedin_url": {
@@ -253,6 +265,140 @@
           "type": [
             "object",
             "null"
+          ],
+          "properties": {
+            "6913c69d5c848e0001db3166": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6913c69e5c848e0001db3185": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6913c69e5c848e0001db319e": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "69de6a786072ac0019b61ffb": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6adb68a67ba273000c0e4a4d": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "6adb68a77ba273000c0e4a4f": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "facebook_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "godmode_apollo_creator": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "hubspot_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent_strength": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "last_activity_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "organization_headcount_six_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "organization_headcount_twelve_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "organization_headcount_twenty_four_month_growth": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "suggested_from_rule_engine_config_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "twitter_url": {
+          "type": [
+            "string",
+            "null"
           ]
         }
       }
@@ -263,6 +409,19 @@
         "null"
       ]
     },
+    "ai_variables_status": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
     "answered": {
       "type": [
         "string",
@@ -272,7 +431,22 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
+    },
+    "call_script": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "campaign_name": {
       "type": [
@@ -292,6 +466,12 @@
         "null"
       ],
       "format": "date-time"
+    },
+    "completed_by_user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "contact": {
       "type": [
@@ -314,7 +494,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "contact_emails": {
           "type": [
@@ -342,7 +524,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "email_md5": {
                 "type": [
@@ -377,7 +561,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "free_domain": {
                 "type": [
@@ -390,6 +576,81 @@
                   "integer",
                   "null"
                 ]
+              },
+              "email_domain_catchall": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "email_domain_catchall_verdict": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_needs_tickling": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "email_status_unavailable_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_true_status": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "third_party_vendor_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vendor_validation_statuses": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "raw_status": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "third_party_validator_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "timestamp": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
+                    }
+                  }
+                }
               }
             }
           }
@@ -408,7 +669,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "contact_rule_config_statuses": {
@@ -425,7 +688,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "contact_stage_id": {
@@ -474,7 +739,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "direct_dial_enrichment_failed_at": {
           "type": [
@@ -492,7 +759,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "email": {
           "type": [
@@ -515,7 +784,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "email_needs_tickling": {
           "type": [
@@ -556,7 +827,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "emailer_campaign_ids": {
           "type": [
@@ -609,7 +882,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "description": {
                 "type": [
@@ -620,7 +895,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "emails": {
                 "type": [
@@ -631,7 +908,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "end_date": {
                 "type": [
@@ -648,7 +927,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "id": {
                 "type": [
@@ -671,7 +952,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "major": {
                 "type": [
@@ -682,7 +965,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "organization_id": {
                 "type": [
@@ -705,7 +990,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "start_date": {
                 "type": [
@@ -725,6 +1012,12 @@
                   "null"
                 ],
                 "format": "date-time"
+              },
+              "org_matched_by_name": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
               }
             }
           }
@@ -744,7 +1037,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "first_name": {
           "type": [
@@ -791,7 +1086,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "id": {
           "type": [
@@ -819,7 +1116,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "last_activity_date": {
@@ -855,7 +1154,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "name": {
           "type": [
@@ -913,7 +1214,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "dnc_other_info": {
                 "type": [
@@ -924,7 +1227,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "dnc_status": {
                 "type": [
@@ -935,7 +1240,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               },
               "position": {
                 "type": [
@@ -966,6 +1273,43 @@
                   "string",
                   "null"
                 ]
+              },
+              "dnc_country_supported": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "source_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "third_party_vendor_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vendor_validation_statuses": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "number",
+                    "integer",
+                    "boolean",
+                    "object",
+                    "array",
+                    "null"
+                  ],
+                  "properties": {},
+                  "additionalProperties": true
+                }
               }
             }
           }
@@ -991,7 +1335,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "salesforce_account_id": {
           "type": [
@@ -1069,7 +1415,15 @@
           "type": [
             "object",
             "null"
-          ]
+          ],
+          "properties": {
+            "6913c69d5c848e0001db3149": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         },
         "updated_at": {
           "type": [
@@ -1083,6 +1437,439 @@
             "boolean",
             "null"
           ]
+        },
+        "call_opted_out": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contact_campaign_statuses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "added_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "added_by_user_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "auto_unpause_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "bcc_emails": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ],
+                "properties": {},
+                "additionalProperties": true
+              },
+              "cc_emails": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ],
+                "properties": {},
+                "additionalProperties": true
+              },
+              "current_step_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "current_step_position": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "emailer_campaign_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "failure_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "finished_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "in_response_to_emailer_message_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "inactive_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "manually_set_unpause": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ],
+                "properties": {},
+                "additionalProperties": true
+              },
+              "paused_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "send_email_from_email_account_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "send_email_from_email_address": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "send_email_from_user_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "status": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "to_emails": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ],
+                "properties": {},
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "contact_job_change_event": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "account_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "account_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "charged": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "contact_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "contact_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "created_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "is_dismissed": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "is_processed": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "new_organization_domain": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "new_organization_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "new_organization_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_account_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_account_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_organization_domain": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_organization_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_organization_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "old_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "person_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "directory_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_domain_catchall_verdict": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facebook_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "formatted_address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "godmode_apollo_creator": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "hubspot_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent_strength": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "outbound_subscriptions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "person_deleted": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "postal_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "street_address": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
         }
       }
     },
@@ -1124,6 +1911,606 @@
         "null"
       ]
     },
+    "emailer_message": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ai_variables_status": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "appendment_html": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "appendment_html_loaded": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "async_sending": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "attachment_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "bcc_emails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "block_sending_for_unhealthy_domain": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "body_html": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "body_html_loaded": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "body_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bounce": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cc_emails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "click_tracking_enabled": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "contact_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conversation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "crm_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "demoed": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "domain_enforcement_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "due_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "due_at_manually_changed": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "due_at_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "emailer_campaign_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "emailer_step_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "emailer_touch_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "enable_tracking": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "failed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "failure_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "from_email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "from_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "needs_dynamic_assemble": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "not_sent_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "open_tracking_enabled": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "personalized_opener": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "provider_message_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provider_thread_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "recipients": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "contact_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "raw_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "recipient_type_cd": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "user_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "replied": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "reply_class": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "schedule_delayed_limit_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schedule_delayed_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schedule_delayed_reason_details": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "send_from": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "contact_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "email": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "raw_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "recipient_type_cd": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "user_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "send_from_info": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sensitive_info_redacted": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "spam_blocked": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ],
+          "properties": {},
+          "additionalProperties": true
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "time_zone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to_email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tracking_disabled_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "user_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "engagement_data": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_engagement_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "types_count": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "count": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "type_cd": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
     "hubspot_id": {
       "type": [
         "string",
@@ -1162,7 +2549,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "note": {
       "type": [
@@ -1196,7 +2585,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               }
             },
             "account_rule_config_statuses": {
@@ -1273,7 +2664,9 @@
               "type": [
                 "object",
                 "null"
-              ]
+              ],
+              "properties": {},
+              "additionalProperties": true
             },
             "contact_emailer_campaign_ids": {
               "type": [
@@ -1289,7 +2682,9 @@
                   "object",
                   "array",
                   "null"
-                ]
+                ],
+                "properties": {},
+                "additionalProperties": true
               }
             },
             "created_at": {
@@ -1326,7 +2721,9 @@
                 "object",
                 "array",
                 "null"
-              ]
+              ],
+              "properties": {},
+              "additionalProperties": true
             },
             "domain": {
               "type": [
@@ -1427,7 +2824,9 @@
                 "object",
                 "array",
                 "null"
-              ]
+              ],
+              "properties": {},
+              "additionalProperties": true
             },
             "phone_status": {
               "type": [
@@ -1463,7 +2862,9 @@
               "type": [
                 "object",
                 "null"
-              ]
+              ],
+              "properties": {},
+              "additionalProperties": true
             }
           }
         },
@@ -1575,7 +2976,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "deal_probability": {
           "type": [
@@ -1592,7 +2995,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "description": {
           "type": [
@@ -1603,7 +3008,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "exchange_rate_code": {
           "type": [
@@ -1668,7 +3075,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "manually_updated_probability": {
           "type": [
@@ -1679,7 +3088,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "name": {
           "type": [
@@ -1810,7 +3221,9 @@
               "object",
               "array",
               "null"
-            ]
+            ],
+            "properties": {},
+            "additionalProperties": true
           }
         },
         "opportunity_stage_id": {
@@ -1834,7 +3247,9 @@
             "object",
             "array",
             "null"
-          ]
+          ],
+          "properties": {},
+          "additionalProperties": true
         },
         "salesforce_id": {
           "type": [
@@ -1931,6 +3346,12 @@
         "null"
       ]
     },
+    "pending_send": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "person_id": {
       "type": [
         "string",
@@ -1951,7 +3372,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "playbook_id": {
@@ -1974,7 +3397,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "priority": {
@@ -1982,6 +3407,50 @@
         "string",
         "null"
       ]
+    },
+    "recommendation_reasoning": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recommendation_reasons": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "properties": {},
+        "additionalProperties": true
+      }
+    },
+    "recommended": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "relevant_fields": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "rule_config_id": {
       "type": [
@@ -2004,7 +3473,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "skipped_at": {
       "type": [
@@ -2012,6 +3483,19 @@
         "null"
       ],
       "format": "date-time"
+    },
+    "slice_keys": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "starred_by_user_ids": {
       "type": [
@@ -2027,7 +3511,9 @@
           "object",
           "array",
           "null"
-        ]
+        ],
+        "properties": {},
+        "additionalProperties": true
       }
     },
     "status": {
@@ -2045,7 +3531,9 @@
         "object",
         "array",
         "null"
-      ]
+      ],
+      "properties": {},
+      "additionalProperties": true
     },
     "title": {
       "type": [
