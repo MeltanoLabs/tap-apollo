@@ -5,7 +5,7 @@ from __future__ import annotations
 import contextlib
 import io
 import json
-from typing import cast
+from typing import Any, cast
 
 import pytest
 import responses
@@ -222,7 +222,7 @@ def test_mixed_type_fields_are_emitted_as_strings() -> None:
 
 @responses.activate
 def test_custom_field_values_are_kept() -> None:
-    contact = {
+    contact: dict[str, Any] = {
         "id": "c1",
         "updated_at": "2026-03-02T00:00:00.000Z",
         "typed_custom_fields": {"0123456789abcdef01234567": "Gold"},
