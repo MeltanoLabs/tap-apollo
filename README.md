@@ -1,0 +1,103 @@
+# tap-apollo
+
+`tap-apollo` is a Singer tap for [Apollo.io](https://www.apollo.io/), built with the
+[Meltano Singer SDK](https://sdk.meltano.com). It extracts the records your team
+manages in Apollo (contacts, accounts, deals, tasks, calls, sequences and
+outreach emails) plus workspace reference data, through the
+[Apollo REST API](https://docs.apollo.io/reference/apollo-api).
+
+## Streams
+
+| Stream | Endpoint | Replication |
+|:--|:--|:--|
+| `contacts` | `POST /contacts/search` | Incremental on `updated_at` |
+| `accounts` | `POST /accounts/search` | Full table |
+| `opportunities` | `GET /opportunities/search` | Full table |
+| `tasks` | `POST /tasks/search` | Full table |
+| `phone_calls` | `GET /phone_calls/search` | Full table |
+| `sequences` | `POST /emailer_campaigns/search` | Full table |
+| `emailer_messages` | `GET /emailer_messages/search` | Full table |
+| `users` | `GET /users/search` | Full table |
+| `email_accounts` | `GET /email_accounts` | Full table |
+| `lists` | `GET /labels` | Full table |
+| `custom_fields` | `GET /typed_custom_fields` | Full table |
+| `contact_stages` | `GET /contact_stages` | Full table |
+| `account_stages` | `GET /account_stages` | Full table |
+| `opportunity_stages` | `GET /opportunity_stages` | Full table |
+
+### Limitations
+
+- **50,000 records per search.** Apollo's search endpoints return at most 500 pages
+  of 100 records. When a stream hits that cap, the tap logs a warning and stops.
+  Apollo has no updated-since filter, so `contacts` is requested newest first and
+  pagination stops at the bookmark. After the first sync, each run only needs to
+  page through contacts that changed since the last run.
+- **Master API key.** Some endpoints (e.g. `users`, `emailer_messages`) only accept
+  a [master API key](https://docs.apollo.io/docs/create-api-key). With a regular key
+  these streams fail with a 403. Deselect them if your key doesn't have access.
+- **Rate limits.** Apollo limits calls per minute, hour and day, depending on your
+  plan. The tap retries 429 responses, honoring `Retry-After` when Apollo sends it.
+- **Schemas.** Schemas in `tap_apollo/schemas/` are generated from Apollo's
+  OpenAPI spec and response examples by `scripts/gen_schemas.py`. Fields not in
+  the spec are dropped. Rerun the script to pick up spec changes:
+
+  ```bash
+  curl -sSLo spec.json https://docs.apollo.io/openapi/apollo-rest-api.json
+  python scripts/gen_schemas.py spec.json tap_apollo/schemas
+  ```
+
+## Configuration
+
+| Setting | Required | Description |
+|:--|:--:|:--|
+| `api_key` | Yes | Apollo API key (Settings → Integrations → API). |
+| `start_date` | No | Earliest update time to extract for `contacts`. |
+
+The SDK also supports `stream_maps`, `flattening_enabled` and the other standard
+settings. Run `tap-apollo --about` to list them all.
+
+Settings can also be set via environment variables, e.g. `TAP_APOLLO_API_KEY`
+(see `.env.example`), when the tap runs with `--config=ENV`.
+
+## Usage with Meltano
+
+Add the tap to a Meltano project as a custom extractor:
+
+```yaml
+plugins:
+  extractors:
+  - name: tap-apollo
+    namespace: tap_apollo
+    pip_url: git+https://github.com/<org>/tap-apollo.git
+    capabilities: [state, catalog, discover, about, stream-maps, structured-logging]
+    settings:
+    - name: api_key
+      kind: string
+      sensitive: true
+    - name: start_date
+      kind: date_iso8601
+    settings_group_validation:
+    - [api_key]
+```
+
+```bash
+meltano install extractor tap-apollo
+meltano config tap-apollo set api_key <key>
+meltano run tap-apollo target-jsonl
+```
+
+## Development
+
+```bash
+uv sync
+uv run pytest                                  # offline tests with a mocked API
+TAP_APOLLO_API_KEY=<key> uv run pytest         # also runs the SDK's standard tests live
+uv run tap-apollo --config .secrets/config.json --discover
+```
+
+`meltano.yml` in this repo is set up for local testing:
+
+```bash
+meltano install
+meltano run tap-apollo target-jsonl
+```

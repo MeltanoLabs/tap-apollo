@@ -1,0 +1,38 @@
+send_anonymous_usage_stats: true
+project_id: "tap-apollo"
+default_environment: test
+requires_meltano: ">=4.0"
+environments:
+- name: test
+plugins:
+  extractors:
+  - name: "tap-apollo"
+    namespace: "tap_apollo"
+    pip_url: -e .
+    capabilities:
+    - state
+    - catalog
+    - discover
+    - about
+    - stream-maps
+    - structured-logging
+
+    settings:
+    - name: api_key
+      kind: string
+      label: API Key
+      description: Apollo API key. A master API key is required for some streams (e.g. users, emailer_messages).
+      sensitive: true
+
+    - name: start_date
+      kind: date_iso8601
+      label: Start Date
+      description: Earliest update time to extract for incremental streams (contacts). Other streams are always fully replicated.
+
+    settings_group_validation:
+    - [api_key]
+
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl

@@ -1,0 +1,491 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "appendment_html": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "appendment_html_loaded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "async_sending": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "attachment_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "bcc_emails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "body_html": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "body_html_loaded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "body_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bounce": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "campaign_max_emails_per_day": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "campaign_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "campaign_position": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "cc_emails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "contact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "crm_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "demoed": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "due_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "due_at_manually_changed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "due_at_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email_account_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailer_campaign_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailer_step_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailer_touch_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "enable_tracking": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "failed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "failure_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "from_email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "from_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "needs_dynamic_assemble": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "not_sent_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "personalized_opener": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "provider_message_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider_thread_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "contact_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "raw_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recipient_type_cd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "user_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "replied": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "reply_class": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "schedule_delayed_limit_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schedule_delayed_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schedule_delayed_reason_details": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "send_from": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "contact_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "recipient_type_cd": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "user_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "send_from_info": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sensitive_info_redacted": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "spam_blocked": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "step_max_emails_per_day": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "subject": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "time_zone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "to_email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "to_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tracking_disabled_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

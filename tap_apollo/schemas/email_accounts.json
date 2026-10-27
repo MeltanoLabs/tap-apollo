@@ -1,0 +1,587 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "active_campaigns_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aliases": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "default": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deliverability_score": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "avg_click_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_daily_sent": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_delivered_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_hard_bounce_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_open_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_reply_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_spam_block_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "avg_unsubscribe_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "click_rate_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "concurrency_locks": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "daily_email_sent_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "date_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date_to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deliverability_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "domain_health_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "email_account_domain_age_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "email_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hard_bounce_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "open_rate_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "random": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reply_rate_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "spam_block_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_clicked_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_delivered_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_hard_bounced_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_opened_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_replied_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_sent_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_spam_blocked_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sum_unsubscribed_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "team_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unsubscribe_rate_score": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "user_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email_daily_threshold": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "email_sending_policy_cd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fields_fully_loaded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "inactive_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_opted_in_mailwarming": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "last_synced_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "limits_editable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mailgun_domains": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "mailwarming_eta": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "mailwarming_max": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mailwarming_on_weekdays_only": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mailwarming_score": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mailwarming_score_banner": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mailwarming_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mailwarming_subject_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mailwarming_to_send_daily": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mailwarming_to_send_incrementor": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "max_outbound_emails_per_hour": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "nudge_user_to_send_mails": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "nylas_api_version": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "nylas_provider": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "provider_display_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revoked_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "seconds_delay_between_emails": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sendgrid_api_key_v3": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "sendgrid_api_user": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "signature_edit_disabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "signature_html": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "true_warmup_approximate_end_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "true_warmup_daily_limit": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "true_warmup_enable_thresholds": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "true_warmup_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "true_warmup_last_throttled_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "true_warmup_progress": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "true_warmup_status": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "true_warmup_thresholds": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bounce_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "open_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reply_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "spam_block_rate": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

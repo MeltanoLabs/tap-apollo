@@ -1,0 +1,862 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "account": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "account_playbook_statuses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "added_by_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "added_on": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "completed_step_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "number",
+                    "integer",
+                    "boolean",
+                    "object",
+                    "array",
+                    "null"
+                  ]
+                }
+              },
+              "created_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "current_step_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "finished_reason_cd": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "paused_reason_cd": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "playbook_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "position": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "status_cd": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "updated_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        "account_rule_config_statuses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "created_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "rule_action_config_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "rule_config_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "status_cd": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "updated_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        "account_stage_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alexa_ranking": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "angellist_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "blog_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contact_campaign_status_tally": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "contact_emailer_campaign_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "creator_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crunchbase_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "custom_field_errors": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "domain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "existence_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facebook_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "founded_year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "hubspot_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "languages": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "last_activity_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linkedin_uid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linkedin_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logo_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "market_cap": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "num_contacts": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "organization_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_domain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_phone": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sanitized_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "publicly_traded_exchange": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publicly_traded_symbol": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanitized_phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_display_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "team_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "twitter_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "typed_custom_fields": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "website_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "account_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "actual_close_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "amount": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "amount_in_team_currency": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "closed_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "closed_lost_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "closed_won_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "created_by_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "crm_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "crm_owner_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "crm_record_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currency": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "iso_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "symbol": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "current_solutions": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "deal_probability": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "deal_source": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "exchange_rate_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "exchange_rate_value": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "existence_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "forecast_category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "forecasted_revenue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_closed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_won": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "last_activity_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manually_updated_forecast": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "manually_updated_probability": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "next_step": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "next_step_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "next_step_last_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "opportunity_contact_roles": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "opportunity_pipeline_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opportunity_rule_config_statuses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "opportunity_stage_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owner_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "probability": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "salesforce_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "salesforce_owner_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stage_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stage_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "typed_custom_fields": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

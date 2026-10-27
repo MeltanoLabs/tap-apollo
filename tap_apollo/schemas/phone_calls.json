@@ -1,0 +1,973 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "agent_call_sid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "call_identifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conference_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "contact": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "account_phone_note": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "call_opted_out": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contact_emails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "email": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_md5": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_needs_tickling": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ]
+              },
+              "email_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_status": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_status_unavailable_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "email_true_status": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "extrapolated_email_confidence": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ]
+              },
+              "free_domain": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "position": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "source": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "third_party_vendor_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vendor_validation_statuses": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "number",
+                    "integer",
+                    "boolean",
+                    "object",
+                    "array",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "contact_roles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "contact_stage_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "creator_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crm_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "custom_field_errors": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "direct_dial_enrichment_failed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "direct_dial_status": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_domain_catchall": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "email_from_customer": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "email_needs_tickling": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "email_source": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "email_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_status_unavailable_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_true_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email_unsubscribed": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "emailer_campaign_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "existence_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extrapolated_email_confidence": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "facebook_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "first_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "free_domain": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_email_arcgate_request": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "has_pending_email_arcgate_request": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "headline": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "hubspot_company_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hubspot_vid": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "last_activity_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "last_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linkedin_uid": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "linkedin_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "merged_crm_ids": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization_logo_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "organization_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "person_deleted": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "person_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phone_numbers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "dialer_flags": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ]
+              },
+              "dnc_other_info": {
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "dnc_status": {
+                "type": [
+                  "string",
+                  "number",
+                  "integer",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+                ]
+              },
+              "position": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "raw_number": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "sanitized_number": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "status": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "third_party_vendor_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vendor_validation_statuses": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "number",
+                    "integer",
+                    "boolean",
+                    "object",
+                    "array",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "photo_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "present_raw_address": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "queued_for_crm_push": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "salesforce_account_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_contact_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_lead_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salesforce_record_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanitized_phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "show_intent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_display_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggested_from_rule_engine_config_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "twitter_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "typed_custom_fields": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updated_email_true_status": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "contact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conversation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "duration": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "end_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "from_number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hubspot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "inbound": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "logged": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "need_recording_upload": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "note": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "note_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opportunity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outreach_task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parallel_dial_item_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phone_call_outcome_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phone_call_purpose_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recording_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "salesforce_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "start_time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "to_number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transcribed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "transcribing": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "transcription_progress": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "transcription_too_long": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "twilio_call_sid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "twilio_recording_sid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "voice_setting_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "voicemail_dropped": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

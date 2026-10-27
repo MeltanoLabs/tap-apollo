@@ -1,0 +1,203 @@
+"""REST client handling, including ApolloStream base class."""
+
+from __future__ import annotations
+
+import sys
+from http import HTTPStatus
+from typing import TYPE_CHECKING, Any, cast
+
+from singer_sdk import SchemaDirectory, StreamSchema
+from singer_sdk.authenticators import APIKeyAuthenticator
+from singer_sdk.exceptions import RetriableAPIError
+from singer_sdk.pagination import PageNumberPaginator, SinglePagePaginator
+from singer_sdk.streams import RESTStream
+
+from tap_apollo import schemas
+
+if sys.version_info >= (3, 12):
+    from typing import override
+else:
+    from typing_extensions import override
+
+if TYPE_CHECKING:
+    from collections.abc import Generator
+
+    import requests
+    from singer_sdk.pagination import BaseAPIPaginator
+    from singer_sdk.streams.rest import HTTPRequest, PageContext
+
+SCHEMAS_DIR = SchemaDirectory(schemas)
+
+# Apollo search endpoints only return the first 50,000 matches of a query:
+# 100 records per page, up to 500 pages.
+MAX_PER_PAGE = 100
+MAX_PAGES = 500
+
+
+class ApolloPaginator(PageNumberPaginator):
+    """Page-number paginator for Apollo search endpoints."""
+
+    def __init__(self, stream: ApolloStream) -> None:
+        """Create a paginator that starts at page 1.
+
+        Args:
+            stream: The stream being paginated, used to parse records and log.
+        """
+        super().__init__(start_value=1)
+        self.stream = stream
+
+    @override
+    def has_more(self, response: requests.Response) -> bool:
+        """Return whether another page should be requested.
+
+        Args:
+            response: The API response object.
+
+        Returns:
+            True if there are more pages to fetch.
+        """
+        records = list(self.stream.parse_response(response))
+        if not records or self.stream.stop_paginating(records):
+            return False
+
+        pagination = response.json().get("pagination") or {}
+        total_pages = int(pagination.get("total_pages") or 0)
+        if pagination and self.current_value >= total_pages:
+            return False
+        if not pagination and len(records) < MAX_PER_PAGE:
+            return False
+
+        if self.current_value >= MAX_PAGES:
+            self.stream.logger.warning(
+                "Stream '%s' reached Apollo's limit of %d pages (%d records). "
+                "%s matching records were not extracted.",
+                self.stream.name,
+                MAX_PAGES,
+                MAX_PAGES * MAX_PER_PAGE,
+                pagination.get("total_entries", "Further"),
+            )
+            return False
+        return True
+
+
+class ApolloStream(RESTStream):
+    """Apollo stream class."""
+
+    url_base = "https://api.apollo.io/api/v1"
+    primary_keys = ("id",)
+    schema = StreamSchema(SCHEMAS_DIR)
+
+    #: Whether the endpoint is paginated with `page` and `per_page`.
+    paginated = True
+
+    #: Whether pagination parameters go in the JSON body rather than the query string.
+    paginate_in_body = False
+
+    extra_retry_statuses = (HTTPStatus.TOO_MANY_REQUESTS,)
+
+    @override
+    @property
+    def authenticator(self) -> APIKeyAuthenticator:
+        """An authenticator object."""
+        return APIKeyAuthenticator(
+            key="x-api-key",
+            value=self.config["api_key"],
+            location="header",
+        )
+
+    @override
+    @property
+    def http_headers(self) -> dict:
+        """A dictionary of HTTP headers."""
+        return {"Cache-Control": "no-cache", "Content-Type": "application/json"}
+
+    @override
+    def get_new_paginator(self) -> BaseAPIPaginator:
+        """Create a new pagination helper instance.
+
+        Returns:
+            A page-number paginator, or a single-page one for unpaginated endpoints.
+        """
+        if self.paginated:
+            return ApolloPaginator(self)
+        return SinglePagePaginator()
+
+    @override
+    def get_http_request(self, *, page: PageContext[Any]) -> HTTPRequest:
+        """Return a request object for this stream.
+
+        Args:
+            page: An object containing the stream partition or context dictionary,
+                and the next page token if applicable.
+
+        Returns:
+            An HTTP request for this stream.
+        """
+        request = super().get_http_request(page=page)
+        if self.paginated:
+            paging = {"page": page.next_page_token, "per_page": MAX_PER_PAGE}
+            if self.paginate_in_body:
+                body = cast("dict[str, Any]", request.data or {})
+                request.data = {**body, **paging}
+            else:
+                request.params.update(paging)
+        return request
+
+    def stop_paginating(self, records: list[dict]) -> bool:  # ruff: ignore[unused-method-argument, no-self-use]
+        """Return whether pagination should stop early after this page.
+
+        Args:
+            records: The records parsed from the latest page.
+
+        Returns:
+            True to stop requesting further pages.
+        """
+        return False
+
+    @override
+    def backoff_wait_generator(self) -> Generator[float, None, None]:
+        """Wait for Apollo's Retry-After header, or a fixed delay if it is absent.
+
+        Returns:
+            The wait generator.
+        """
+        return self.backoff_runtime(value=self._retry_after)
+
+    @staticmethod
+    def _retry_after(exc: Exception) -> float:
+        response = getattr(exc, "response", None)
+        if not isinstance(exc, RetriableAPIError) or response is None:
+            return 10.0
+        retry_after = response.headers.get("Retry-After", "")
+        if retry_after.isdigit():
+            return float(retry_after)
+        if response.status_code == HTTPStatus.TOO_MANY_REQUESTS:
+            return 60.0
+        return 10.0
+
+    @override
+    def backoff_max_tries(self) -> int:
+        """Apollo's rate limits are per minute/hour, so retry patiently.
+
+        Returns:
+            Number of max retries.
+        """
+        return 8
+
+    @override
+    def response_error_message(self, response: requests.Response) -> str:
+        """Build an error message, with a hint for Apollo's plan/key restrictions.
+
+        Args:
+            response: A :class:`requests.Response` object.
+
+        Returns:
+            The error message.
+        """
+        msg = super().response_error_message(response)
+        if response.status_code == HTTPStatus.FORBIDDEN:
+            msg += (
+                f". Stream '{self.name}' may require a master API key or a paid "
+                "Apollo plan; deselect it if your key does not have access."
+            )
+        return msg

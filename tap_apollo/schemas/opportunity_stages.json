@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "display_order": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "forecast_category_cd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_closed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_editable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_meeting_set": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "is_won": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opportunity_pipeline_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "probability": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "salesforce_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

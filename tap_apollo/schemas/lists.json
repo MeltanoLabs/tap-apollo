@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cached_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "concurrency_locks": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "id": {
+      "type": "string"
+    },
+    "key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "modality": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "need_cached_count_update": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "needs_count_update_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "rule_config_template_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

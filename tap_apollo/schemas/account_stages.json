@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_exclude_for_leadgen": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "display_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "display_order": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_meeting_set": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

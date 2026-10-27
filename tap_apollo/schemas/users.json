@@ -1,0 +1,974 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ai_credit_limit": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "apollo_everywhere_search_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "assistant_setting": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deal_size_metric": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inactive_account_stage_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "inactive_contact_stage_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "insight_deal_size_signals": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "insight_sale_cycle_signals": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "insight_win_rate_signals": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "is_persona_recommendation_requested": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "job_posting_locations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "job_posting_titles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "latest_funding_days": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "max_num_active_accounts": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "max_people_in_sequence_per_account": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "num_inactive_days_to_re_engage": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "persona_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "should_show_persona_banner": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "success_case_account_stage_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "team_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technology_uids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "territory_company_size_ranges": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array",
+              "null"
+            ]
+          }
+        },
+        "territory_location_override": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "territory_locations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "territory_person_locations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "user_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "bridge_calls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "bridge_incoming_calls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "bridge_incoming_phone_number": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "bridge_phone_number": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "chrome_extension_auto_match_salesforce_opportunity": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "chrome_extension_downloaded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "chrome_extension_enabled_features": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "chrome_extension_everywhere_icon_horizontal_position": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "chrome_extension_everywhere_icon_vertical_position_in_vh": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "chrome_extension_exclude_from_websites": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "chrome_extension_gmail_enable_crm_sidebar": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "chrome_extension_gmail_enable_email_tools": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "connected_to_slack": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "conversation_is_private": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "credit_limit": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "crm_email": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "crm_requested_to_integrate": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "current_email_verified": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "daily_data_request_email": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "daily_task_email": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "data_request_emails": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "default_account_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_chrome_extension_enable_reminders": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "default_chrome_extension_log_email_send_to_hubspot": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "default_chrome_extension_log_email_send_to_salesforce": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "default_cockpit_layout": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "default_contact_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_home_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_opportunity_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_organization_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_person_overview_layout_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "default_use_local_numbers": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "direct_dial_credit_limit": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "disable_email_linking": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "dismiss_new_team_suggestion": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "email_oauth_signin_only": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "enable_click_tracking": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "enable_desktop_notifications": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "enable_gmail_desktop_notifications": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "enable_one_click_unsubscribe": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "enable_open_tracking": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "export_credit_limit": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "fields_fully_loaded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "first_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "free_data_credits_email": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_conference_account": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_hidden_onboarding": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_invited_user": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_uploaded_csv": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "has_used_enrichment": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "linked_bot_conference_account": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "linked_bot_conference_account_platforms": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "linked_crm_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "linked_hubspot": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "linked_salesforce": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "linked_salesloft": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "linked_zoom_conference_account": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notification_last_created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "notification_last_read_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "opt_out_html_template": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "password_needs_reset": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "permission_set_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prospect_territory_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "record_calls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "referral_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "request_email_change_to": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "salesforce_account": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "salesforce_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "salesforce_instance_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "self_identified_persona": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "should_include_unsubscribe_link": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "show_chrome_extension_buying_intent_promo": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "show_deals_detail_page_updates_modal": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "subteam_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "sync_crm_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sync_salesforce_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "territory_is_active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toggled_on_territory_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "triggered_referral_campaigns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "typed_custom_fields": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "zp_contact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "zp_is_super_analytics_user": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    }
+  }
+}

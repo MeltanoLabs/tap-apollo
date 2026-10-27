@@ -1,0 +1,491 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ab_test_step_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ]
+      }
+    },
+    "active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "archived": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "bcc_emails": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bounce_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "cc_emails": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "click_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "contact_email_event_to_stage_mapping": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "create_task_if_email_open": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "creation_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "days_to_wait_before_mark_as_response": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "demo_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "email_open_trigger_task_threshold": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "emailer_schedule_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "excluded_account_stage_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "excluded_contact_stage_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "folder_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hard_bounce_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_performing_poorly": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "label_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "last_used_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "loaded_stats": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mark_finished_if_click": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mark_finished_if_interested": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mark_finished_if_reply": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "mark_paused_if_ooo": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "max_emails_per_day": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "num_contacts_email_status_extrapolated": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "num_steps": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "open_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opt_out_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "prioritized_by_user": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "remind_ab_test_results": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "reply_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "same_account_reply_delay_days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "same_account_reply_policy_cd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sequence_by_exact_daytime": {
+      "type": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array",
+        "null"
+      ]
+    },
+    "sequence_ruleset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sharing_permission": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "access_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "is_owner": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "object_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "object_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sharing_accesses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "access_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "is_default": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "object_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "object_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "shared_by": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "user_or_team_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "user_or_team_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "visibility": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "spam_block_rate": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "starred_by_user_ids": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "underperforming_touches_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_bounced": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_clicked": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_delivered": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_demoed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_hard_bounced": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_opened": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_replied": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_scheduled": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_spam_blocked": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "unique_unsubscribed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
