@@ -41,6 +41,14 @@ MAX_PAGES = 500
 REQUEST_TIMEOUT = 60
 
 
+def _is_number(value: str) -> bool:
+    try:
+        float(value)
+    except ValueError:
+        return False
+    return True
+
+
 class ApolloPaginator(PageNumberPaginator):
     """Page-number paginator for Apollo search endpoints."""
 
@@ -174,22 +182,38 @@ class ApolloStream(RESTStream):
                 request.params.update(paging)
         return request
 
-    @cached_property
-    def _string_fields(self) -> frozenset[str]:
-        """Top-level fields declared as plain strings."""
+    def _fields_of_type(self, *types: str) -> frozenset[str]:
+        """Top-level fields declared as one of the given types (and null).
+
+        Returns:
+            The field names.
+        """
         fields = set()
         for name, prop in self.schema["properties"].items():
-            types = prop.get("type", [])
-            if set(types if isinstance(types, list) else [types]) - {"null"} == {"string"}:
+            declared = prop.get("type", [])
+            kinds = set(declared if isinstance(declared, list) else [declared]) - {"null"}
+            if kinds and kinds <= set(types):
                 fields.add(name)
         return frozenset(fields)
 
+    @cached_property
+    def _string_fields(self) -> frozenset[str]:
+        """Top-level fields declared as plain strings."""
+        return self._fields_of_type("string")
+
+    @cached_property
+    def _number_fields(self) -> frozenset[str]:
+        """Top-level fields declared as numbers or integers."""
+        return self._fields_of_type("number", "integer")
+
     @override
     def post_process(self, row: dict, context: Context | None = None) -> dict | None:
-        """JSON-encode values of string fields that arrive as another type.
+        """JSON-encode non-strings in string fields, and null text in number fields.
 
         Fields whose type varies are declared as strings, because some targets fail on
-        columns that mix objects and scalars.
+        columns that mix objects and scalars. A number field holds text such as
+        "loading" while Apollo is still calculating it (a sequence's click rates): that
+        is no value yet, so it is emitted as null rather than failing the load.
 
         Returns:
             The record.
@@ -199,6 +223,9 @@ class ApolloStream(RESTStream):
             if value is not None and not isinstance(value, str):
                 # The SDK parses JSON numbers as Decimal.
                 row[name] = json.dumps(value, default=float)
+        for name in self._number_fields & row.keys():
+            if isinstance(row[name], str) and not _is_number(row[name]):
+                row[name] = None
         return row
 
     def stop_paginating(self, records: list[dict]) -> bool:  # ruff: ignore[unused-method-argument, no-self-use]
