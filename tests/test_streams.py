@@ -221,6 +221,19 @@ def test_mixed_type_fields_are_emitted_as_strings() -> None:
 
 
 @responses.activate
+def test_number_fields_still_loading_are_null() -> None:
+    sequence = {"id": "s1", "click_rate_unfiltered": "loading", "click_rate": 0.25}
+    responses.post(
+        f"{BASE}/emailer_campaigns/search", json=page("emailer_campaigns", [sequence], 1, 1)
+    )
+
+    record = get_records(make_tap(), "sequences")[0]
+
+    assert record["click_rate_unfiltered"] is None
+    assert record["click_rate"] == pytest.approx(0.25)
+
+
+@responses.activate
 def test_custom_field_values_are_kept() -> None:
     contact: dict[str, Any] = {
         "id": "c1",
